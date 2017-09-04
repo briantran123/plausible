@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="plApp" ng-controller="pageController_main as main">
+  <head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="apple-touch-icon" href="/APP/IMAGES/LOGOS/ICON/_.png">
+    <link rel="apple-touch-startup-image" href"=/APP/IMAGES/LOGOS/LAUNCH/_.png">
+    <meta name="apple-mobile-web-app-title" content="KE-HY">
+    <meta name="theme-color" content="#FFFFFF">
+    <title>
+      PLAUSIBLE
+    </title>
+    <script>/* (externalScript:moment.js) */</script>
+    <script>/* (externalScript:moment-timezone-with-data.min.js) */</script>
+    <script>/* (externalScript:ResizeSensor.js) */</script>
+    <script>/* (externalScript:angular.js) */</script>
+    <script>/* (externalScript:angular-aria.js) */</script>
+    <script>/* (externalScript:angular-animate.js) */</script>
+    <script>/* (externalScript:angular-route.js) */</script>
+    <script>/* (externalScript:angular-material.js) */</script>
+    <script>/* (externalScript:flickity.pkgd.js) */</script>
+    <script>/* (externalScript:stripe.js) */</script>
+    <style>/* (externalStylesheet:angular-material.css) */</style>
+    <style>/* (externalStylesheet:flickity.css) */</style>
+    <style>/* (externalStylesheet:material-icons) */</style>
+    <style>/* (externalStylesheet:roboto) */</style>
+    <script>/* (script:APP/JS/modules.js) */</script>
+    <script>/* (script:APP/JS/animations.js) */</script>
+    <script>/* (script:APP/JS/components.js) */</script>
+    <script>/* (script:APP/JS/configs.js) */</script>
+    <script>/* (script:APP/JS/controllers.js) */</script>
+    <script>/* (script:APP/JS/directives.js) */</script>
+    <script>/* (script:APP/JS/factories.js) */</script>
+    <script>/* (script:APP/JS/filters.js) */</script>
+    <style>/* (stylesheet:APP/CSS/_.css) */</style>
+    <style>/* (stylesheet:APP/FONTS/FUTURA/_.css) */</style>
+    <style>/* (stylesheet:APP/FONTS/REALTIME/_.css) */</style>
+    <style>/* (stylesheet:APP/FONTS/REALTIME_ROUNDED/_.css) */</style>
+
+    <script>if(window.location.protocol=="http:"){window.location.protocol="https:"}</script>
+  </head>
+  <body layout="row" flex class="bg-white overflow-hidden" ng-cloak>
+    <div layout="column" class="overflow-hidden">
+      <div layout="row" style="min-height: 100vh;">
+        <md-sidenav layout="column" id="pageElements_sidenav" class="md-sidenav-left" md-component-id="sidenav">
+          <div layout="row" class="overflow-scroll" style="min-height: 100vh;">
+            <div layout="column" flex>
+              <div layout="row" class="pageElements_spacer_row"></div>
+              <div layout="row" class="pageElements_spacer_row" ng-if="main.$mdMedia('gt-sm')"></div>
+              <div layout="row" class="pageElements_spacer_row" ng-if="main.$mdMedia('gt-md')"></div>
+              <div layout="row" class="pageElements_spacer_row" ng-if="main.$mdMedia('gt-lg')"></div>
+              <div layout="row" class="pageElements_spacer_row" ng-if="main.$mdMedia('xl')"></div>
+              <div layout="row" style="min-height: calc((2 * 39px) - 20px);">
+                <div layout="column" class="pageElements_spacer_column"></div>
+                <div layout="column" class="pageElements_spacer_column" ng-if="main.$mdMedia('gt-sm')"></div>
+                <div layout="column" class="pageElements_spacer_column" ng-if="main.$mdMedia('gt-md')"></div>
+                <div layout="column" class="pageElements_spacer_column" ng-if="main.$mdMedia('gt-lg')"></div>
+                <div layout="column" class="pageElements_spacer_column" ng-if="main.$mdMedia('xl')"></div>
+                <div layout="column" flex>
+                  <div layout="row" style="min-height: 19px;">
+                    <a ng-href="/" class="underline left-to-right font-realtime font-weight-700" ng-click="main.$mdSidenav('sidenav').close();">
+                      HOME
+                    </a>
+                  </div>
+                  <div layout="row" class="pageElements_spacer_row"></div>
+                  <div layout="row" style="min-height: 19px;">
+                    <a ng-href="/products/" class="underline left-to-right font-realtime font-weight-700" ng-click="main.$mdSidenav('sidenav').close();">
+                      PRODUCTS
+                    </a>
+                  </div>
+                </div>
+                <div layout="column" class="pageElements_spacer_column"></div>
+                <div layout="column" class="pageElements_spacer_column" ng-if="main.$mdMedia('gt-sm')"></div>
+                <div layout="column" class="pageElements_spacer_column" ng-if="main.$mdMedia('gt-md')"></div>
+                <div layout="column" class="pageElements_spacer_column" ng-if="main.$mdMedia('gt-lg')"></div>
+                <div layout="column" class="pageElements_spacer_column" ng-if="main.$mdMedia('xl')"></div>
+              </div>
+              <div layout="row" class="pageElements_spacer_row"></div>
+              <div layout="row" class="pageElements_spacer_row" ng-if="main.$mdMedia('gt-sm')"></div>
+              <div layout="row" class="pageElements_spacer_row" ng-if="main.$mdMedia('gt-md')"></div>
+              <div layout="row" class="pageElements_spacer_row" ng-if="main.$mdMedia('gt-lg')"></div>
+              <div layout="row" class="pageElements_spacer_row" ng-if="main.$mdMedia('xl')"></div>
+              <div layout="row" flex></div>
+              <div layout="row" class="pageElements_divider_row"></div>
+              <div layout="row" class="pageElements_spacer_row"></div>
+              <div layout="row" style="min-height: 15px;">
+                <div layout="column" class="pageElements_spacer_column"></div>
+                <div layout="column">
+                  <a ng-href="{{ (((account | typeof) !== 'undefined') ? ('/account/') : ('/sign-up/') ) }}" class="underline left-to-right md-caption font-realtime font-weight-700" ng-click="main.$mdSidenav('sidenav').close();" ng-bind="(((account | typeof) !== 'undefined') ? ('ACCOUNT') : ('SIGN UP') )"></a>
+                </div>
+                <div layout="column" class="pageElements_spacer_column" style="min-width: 10px;"></div>
+                <div layout="column" flex></div>
+                <div layout="column" class="pageElements_spacer_column" style="min-width: 10px;"></div>
+                <div layout="column">
+                  <a ng-href="{{ (((account | typeof) !== 'undefined') ? ('/sign-out/') : ('/sign-in/') ) }}" class="underline left-to-right md-caption font-realtime font-weight-700 text-align-right" ng-click="main.$mdSidenav('sidenav').close();" ng-bind="(((account | typeof) !== 'undefined') ? ('SIGN OUT') : ('SIGN IN') )"></a>
+                </div>
+                <div layout="column" class="pageElements_spacer_column"></div>
+              </div>
+              <div layout="row" class="pageElements_spacer_row"></div>
+            </div>
+            <div layout="column" class="pageElements_divider_column m-l-0 m-r-0"></div>
+          </div>
+        </md-sidenav>
+      </div>
+    </div>
+    <div layout="column" flex class="overflow-hidden">
+      <div layout="row" class="overflow-hidden" style="min-height: 57px; z-index: 3;">
+        <div layout="column" flex>
+          <div layout="row" style="position: relative; width: 100%; height: 0; padding-bottom: 57px;">
+            <div layout="column" style="position: absolute; width: 100%; height: 100%;">
+              <div layout="row" flex>
+                <md-toolbar layout="column" flex class="bg-white color-licorice" style="min-height: 56px;">
+                  <div layout="row" flex style="min-height: 56px;">
+                    <div layout="column">
+                      <div layout="row" flex>
+                        <div layout="column" class="pageElements_spacer_column" style="min-width: 8px;"></div>
+                        <div layout="column">
+                          <div layout="row" flex></div>
+                          <div layout="row">
+                            <md-button class="md-icon-button md- m-l-0 m-r-0" ng-click="main.$mdSidenav('sidenav').open()">
+                              <md-icon class="color-licorice">
+                                menu
+                              </md-icon>
+                            </md-button>
+                          </div>
+                          <div layout="row" flex></div>
+                        </div>
+                        <div layout="column" class="pageElements_spacer_column" style="min-width: 8px;"></div>
+                        <div layout="column" class="pageElements_divider_column m-l-0 m-r-0 p-t-0 p-r-0 p-b-0 p-l-0"></div>
+                      </div>
+                    </div>
+                    <div layout="column" class="pageElements_spacer_column" style="min-width: 8px;"></div>
+                    <div layout="column" class="p-t-0 p-l-0 p-b-0 p-r-0" style="width: 9999px; transition: all 0.25s ease-out;"  ng-style="{'minWidth': (((shoppingCart | typeof) == 'undefined') ? 'calc(100vw - 65px)' : 'calc(100vw - 122px)' )}">
+                      <div layout="row" flex></div>
+                      <div layout="row" style="overflow: hidden;">
+                        <div layout="column">
+                          <span class="font-realtime-rounded font-weight-900" style="font-size: 58px; text-shadow: 0 0 calc(58px * 0.02) #111111; line-height: 40px; transform: translate(-1px, -3px);">
+                            PLAUSIBLE
+                          </span>
+                        </div>
+                        <div layout="column" class="pageElements_spacer_column" style="min-width: 8px;"></div>
+                        <div layout="column">
+                          <span class="font-realtime-rounded font-weight-900" style="font-size: 58px; text-shadow: 0 0 calc(58px * 0.02) #111111; line-height: 40px; transform: translate(-1px, -3px);">
+                            PLAUSIBLE
+                          </span>
+                        </div>
+                        <div layout="column" class="pageElements_spacer_column" style="min-width: 8px;"></div>
+                        <div layout="column">
+                          <span class="font-realtime-rounded font-weight-900" style="font-size: 58px; text-shadow: 0 0 calc(58px * 0.02) #111111; line-height: 40px; transform: translate(-1px, -3px);">
+                            PLAUSIBLE
+                          </span>
+                        </div>
+                        <div layout="column" class="pageElements_spacer_column" style="min-width: 8px;"></div>
+                        <div layout="column">
+                          <span class="font-realtime-rounded font-weight-900" style="font-size: 58px; text-shadow: 0 0 calc(58px * 0.02) #111111; line-height: 40px; transform: translate(-1px, -3px);">
+                            PLAUSIBLE
+                          </span>
+                        </div>
+                        <div layout="column" class="pageElements_spacer_column" style="min-width: 8px;"></div>
+                        <div layout="column">
+                          <span class="font-realtime-rounded font-weight-900" style="font-size: 58px; text-shadow: 0 0 calc(58px * 0.02) #111111; line-height: 40px; transform: translate(-1px, -3px);">
+                            PLAUSIBLE
+                          </span>
+                        </div>
+                        <div layout="column" class="pageElements_spacer_column" style="min-width: 8px;"></div>
+                        <div layout="column">
+                          <span class="font-realtime-rounded font-weight-900" style="font-size: 58px; text-shadow: 0 0 calc(58px * 0.02) #111111; line-height: 40px; transform: translate(-1px, -3px);">
+                            PLAUSIBLE
+                          </span>
+                        </div>
+                        <div layout="column" class="pageElements_spacer_column" style="min-width: 8px;"></div>
+                        <div layout="column">
+                          <span class="font-realtime-rounded font-weight-900" style="font-size: 58px; text-shadow: 0 0 calc(58px * 0.02) #111111; line-height: 40px; transform: translate(-1px, -3px);">
+                            PLAUSIBLE
+                          </span>
+                        </div>
+                        <div layout="column" class="pageElements_spacer_column" style="min-width: 8px;"></div>
+                        <div layout="column">
+                          <span class="font-realtime-rounded font-weight-900" style="font-size: 58px; text-shadow: 0 0 calc(58px * 0.02) #111111; line-height: 40px; transform: translate(-1px, -3px);">
+                            PLAUSIBLE
+                          </span>
+                        </div>
+                        <div layout="column" class="pageElements_spacer_column" style="min-width: 8px;"></div>
+                        <div layout="column">
+                          <span class="font-realtime-rounded font-weight-900" style="font-size: 58px; text-shadow: 0 0 calc(58px * 0.02) #111111; line-height: 40px; transform: translate(-1px, -3px);">
+                            PLAUSIBLE
+                          </span>
+                        </div>
+                        <div layout="column" class="pageElements_spacer_column" style="min-width: 8px;"></div>
+                      </div>
+                      <div layout="row" flex></div>
+                    </div>
+                    <div layout="column" style="width: 0; transition: all 0.25s ease-out;" ng-style="{'minWidth': (((shoppingCart | typeof) == 'undefined') ? '0px' : '57px' )}">
+                      <div layout="row" flex>
+                        <div layout="column" class="pageElements_divider_column m-l-0 m-r-0 p-t-0 p-r-0 p-b-0 p-l-0"></div>
+                        <div layout="column" class="pageElements_spacer_column" style="min-width: 8px;"></div>
+                        <div layout="column">
+                          <div layout="row" flex></div>
+                          <div layout="row">
+                            <md-button class="md-icon-button md- m-l-0 m-r-0" ng-href="/shopping-cart/">
+                              <md-icon class="color-licorice">
+                                shopping_cart
+                              </md-icon>
+                            </md-button>
+                          </div>
+                          <div layout="row" flex></div>
+                        </div>
+                        <div layout="column" class="pageElements_spacer_column" style="min-width: 8px;"></div>
+                      </div>
+                    </div>
+                  </div>
+                </md-toolbar>
+              </div>
+              <div layout="row" class="pageElements_divider_row m-t-0 m-b-0"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div layout="row" flex id="pageElements_scrollContainer" class="overflow-scroll" style="min-height: calc(100vh - 57px);">
+        <div layout="column" flex>
+          <div layout="row" flex style="min-height: calc(100vh - 57px);">
+            <div layout="column" flex>
+              <ng-view></ng-view>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

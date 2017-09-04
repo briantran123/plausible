@@ -1,0 +1,72 @@
+<div layout="row" pl-inject-property-values="[['#settings_pageElements_flexColumn', 'offsetWidth']]" ng-style="{'minHeight': propertyValues[0] + 'px'}"></div>
+<div layout="row" class="pageElements_spacer_row"></div>
+<div layout="row" class="pageElements_spacer_row" ng-if="main.$mdMedia('gt-sm')"></div>
+<div layout="row" class="pageElements_spacer_row" ng-if="main.$mdMedia('gt-md')"></div>
+<div layout="row" class="pageElements_spacer_row" ng-if="main.$mdMedia('gt-lg')"></div>
+<div layout="row" class="pageElements_spacer_row" ng-if="main.$mdMedia('xl')"></div>
+<div layout="row">
+  <div layout="column" flex id="settings_pageElements_flexColumn"></div>
+  <div layout="column" class="pageElements_spacer_column"></div>
+  <div layout="column" class="pageElements_spacer_column" ng-if="main.$mdMedia('gt-sm')"></div>
+  <div layout="column" class="pageElements_spacer_column" ng-if="main.$mdMedia('gt-md')"></div>
+  <div layout="column" class="pageElements_spacer_column" ng-if="main.$mdMedia('gt-lg')"></div>
+  <div layout="column" class="pageElements_spacer_column" ng-if="main.$mdMedia('xl')"></div>
+  <md-card layout="column" class="m-t-0 m-r-0 m-b-0 m-l-0 b-licorice" style="border-width: 1px;">
+    <md-card-content layout="row">
+      <div layout="column">
+        <span class="md-display-1 color-licorice font-realtime-rounded font-weight-700 text-align-left" style="text-shadow: 0 0 calc(34px * 0.02) #111111; line-height: 34px;">
+          SETTINGS
+        </span>
+      </div>
+      <div layout="column" flex></div>
+    </md-card-content>
+    <div layout="row">
+      <div layout="column" flex="50">
+        <div layout="row" class="pageElements_divider_row"></div>
+      </div>
+      <div layout="column" flex></div>
+    </div>
+    <md-card-content layout="row">
+      <div layout="column" flex>
+        <md-input-container layout="row" class="m-b-0">
+          <label>
+            CURRENCY
+          </label>
+          <md-select style="width: 100%;" ng-model="settings.currency.selected" ng-change="pageController.settings.currency.saveChanges();">
+            <md-option ng-value="currency" ng-repeat="currency in settings.currency.options" ng-bind="currency.id" ng-selected="currency.id == settings.currency.selected.id"></md-option>
+          </md-select>
+        </md-input-container>
+        <div layout="row" class="pageElements_spacer_row" style="min-height: 16px;"></div>
+        <div layout="row">
+          <div layout="column">
+            <span class="selectable md-caption font-realtime font-weight-700" style="max-width: 18em;">
+              For display purposes only. Plausible Worldwide only captures payments in USD.
+            </span>
+          </div>
+          <div layout="column" flex></div>
+        </div>
+        <div layout="row" class="pageElements_spacer_row" style="min-height: 16px;"></div>
+        <div layout="row">
+          <div layout="column">
+            <span class="selectable md-caption font-realtime font-weight-700" style="max-width: 18em;" ng-bind="'All prices are determined in USD. Exchange rates are updated daily by the European Central Bank at ' + main.moment.unix(54000).tz(main.moment.tz.guess()).format('ha z') +'.'"></span>
+          </div>
+          <div layout="column" flex></div>
+        </div>
+      </div>
+    </md-card-content>
+  </md-card>
+  <div layout="column" flex></div>
+  <div layout="column" class="pageElements_spacer_column"></div>
+  <div layout="column" class="pageElements_spacer_column" ng-if="main.$mdMedia('gt-sm')"></div>
+  <div layout="column" class="pageElements_spacer_column" ng-if="main.$mdMedia('gt-md')"></div>
+  <div layout="column" class="pageElements_spacer_column" ng-if="main.$mdMedia('gt-lg')"></div>
+  <div layout="column" class="pageElements_spacer_column" ng-if="main.$mdMedia('xl')"></div>
+</div>
+<div layout="row" pl-inject-property-values="[['#settings_pageElements_flexColumn', 'offsetWidth']]" ng-style="{'minHeight': propertyValues[0] + 'px'}"></div>
+<div layout="row" class="pageElements_spacer_row"></div>
+<div layout="row" class="pageElements_spacer_row" ng-if="main.$mdMedia('gt-sm')"></div>
+<div layout="row" class="pageElements_spacer_row" ng-if="main.$mdMedia('gt-md')"></div>
+<div layout="row" class="pageElements_spacer_row" ng-if="main.$mdMedia('gt-lg')"></div>
+<div layout="row" class="pageElements_spacer_row" ng-if="main.$mdMedia('xl')"></div>
+
+<pl-footer></pl-footer>

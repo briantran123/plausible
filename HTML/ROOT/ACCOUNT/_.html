@@ -1,0 +1,359 @@
+<div layout="row" pl-inject-property-values="[['#account_pageElements_flexColumn', 'offsetWidth']]" ng-style="{'minHeight': propertyValues[0] + 'px'}"></div>
+<div layout="row" class="pageElements_spacer_row"></div>
+<div layout="row" class="pageElements_spacer_row" ng-if="main.$mdMedia('gt-sm')"></div>
+<div layout="row" class="pageElements_spacer_row" ng-if="main.$mdMedia('gt-md')"></div>
+<div layout="row" class="pageElements_spacer_row" ng-if="main.$mdMedia('gt-lg')"></div>
+<div layout="row" class="pageElements_spacer_row" ng-if="main.$mdMedia('xl')"></div>
+<div layout="row">
+  <div layout="column" flex id="account_pageElements_flexColumn"></div>
+  <div layout="column" class="pageElements_spacer_column"></div>
+  <div layout="column" class="pageElements_spacer_column" ng-if="main.$mdMedia('gt-sm')"></div>
+  <div layout="column" class="pageElements_spacer_column" ng-if="main.$mdMedia('gt-md')"></div>
+  <div layout="column" class="pageElements_spacer_column" ng-if="main.$mdMedia('gt-lg')"></div>
+  <div layout="column" class="pageElements_spacer_column" ng-if="main.$mdMedia('xl')"></div>
+  <div layout="column">
+    <div layout="row">
+      <div layout="column">
+        <span class="md-display-2 color-licorice font-realtime-rounded font-weight-700 text-align-left" style="text-shadow: 0 0 calc(45px * 0.02) #111111; line-height: 45px;">
+          ACCOUNT
+        </span>
+      </div>
+      <div layout="column" flex></div>
+    </div>
+    <div layout="row" class="pageElements_spacer_row"></div>
+    <div layout-gt-xs="row" layout-xs="column">
+      <div layout-gt-xs="column" flex layout-xs="row">
+        <div layout="column" flex>
+          <md-card layout="row" class="m-t-0 m-r-0 m-b-0 m-l-0 b-licorice" style="border-width: 1px;">
+            <div layout="column" flex>
+              <md-card-content layout="row">
+                <div layout="column" flex>
+                  <div layout="row">
+                    <div layout="column">
+                      <span class="md-display-1 color-licorice font-realtime-rounded font-weight-700 text-align-left" style="text-shadow: 0 0 calc(34px * 0.02) #111111; line-height: 34px;">
+                        SETTINGS
+                      </span>
+                    </div>
+                    <div layout="column" flex></div>
+                  </div>
+                </div>
+              </md-card-content>
+              <div layout="row">
+                <div layout="column" flex="33">
+                  <div layout="row" class="pageElements_divider_row"></div>
+                </div>
+                <div layout="column" flex></div>
+              </div>
+              <md-card-content layout="row" ng-if="!pageController.cards[0].loading">
+                <div layout="column" flex style="min-width: 200px;">
+                  <md-input-container layout="row">
+                    <label>GIVEN NAME</label>
+                    <input type="text" ng-model="pageController.cards[0].settings.givenName">
+                  </md-input-container>
+                  <md-input-container layout="row">
+                    <label>FAMILY NAME</label>
+                    <input type="text" ng-model="pageController.cards[0].settings.familyName">
+                  </md-input-container>
+                  <md-input-container layout="row">
+                    <label>EMAIL</label>
+                    <input type="email" disabled ng-model="pageController.cards[0].settings.email">
+                  </md-input-container>
+                  <md-input-container layout="row" class="m-b-0">
+                    <label>PHONE NUMBER</label>
+                    <input type="tel" disabled ng-model="pageController.cards[0].settings.phoneNumber">
+                  </md-input-container>
+                </div>
+              </md-card-content>
+              <md-card-content layout="row" ng-if="pageController.cards[0].loading">
+                <div layout="column" flex></div>
+                <md-progress-circular layout="column" md-mode="indeterminate"></md-progress-circular>
+                <div layout="column" flex></div>
+              </md-card-content>
+              <div layout="row">
+                <div layout="column" flex></div>
+                <div layout="column" flex="33">
+                  <div layout="row" class="pageElements_divider_row"></div>
+                </div>
+              </div>
+              <md-card-content layout="row">
+                <div layout="column" flex></div>
+                <div layout="column">
+                  <a class="underline right-to-left font-realtime font-weight-700 text-align-right" style="font-size: 12px; cursor: not-allowed;" ng-style="{'color': ((pageController.cards[0].settings.givenName !== account.givenName || pageController.cards[0].settings.familyName !== account.familyName || pageController.cards[0].settings.email !== account.email) ? ('#111111') : ('rgba(0, 0, 0, 0.26)') ), 'cursor': ((pageController.cards[0].settings.givenName !== account.givenName || pageController.cards[0].settings.familyName !== account.familyName || pageController.cards[0].settings.email !== account.email) ? ('pointer') : ('not-allowed') )}" ng-click="((pageController.cards[0].settings.givenName !== account.givenName || pageController.cards[0].settings.familyName !== account.familyName || pageController.cards[0].settings.email !== account.email) ? (pageController.cards[0].settings.saveChanges()) : (undefined) )">
+                    SAVE CHANGES
+                  </a>
+                </div>
+              </md-card-content>
+            </div>
+          </md-card>
+          <div layout="row" class="pageElements_spacer_row"></div>
+          <md-card layout="row" class="m-t-0 m-r-0 m-b-0 m-l-0 b-licorice" style="border-width: 1px;">
+            <div layout="column" flex>
+              <md-card-content layout="row">
+                <div layout="column" flex>
+                  <div layout="row">
+                    <div layout="column">
+                      <span class="md-display-1 color-licorice font-realtime-rounded font-weight-700 text-align-left" style="text-shadow: 0 0 calc(34px * 0.02) #111111; line-height: 34px;">
+                        ORDERS
+                      </span>
+                    </div>
+                    <div layout="column" flex></div>
+                  </div>
+                </div>
+              </md-card-content>
+              <div layout="row">
+                <div layout="column" flex="33">
+                  <div layout="row" class="pageElements_divider_row"></div>
+                </div>
+                <div layout="column" flex></div>
+              </div>
+              <md-tabs md-no-ink-bar md-stretch-tabs="always" md-dynamic-height ng-show="!pageController.cards[1].tabs[0].loading && !pageController.cards[1].tabs[1].loading">
+                <md-tab label="PAID">
+                  <md-card-content layout="row">
+                    <div layout="column" flex>
+                      <div layout="row" ng-repeat="orderObject in pageController.cards[1].tabs[0].ordersList" ng-if="pageController.cards[1].tabs[0].ordersList.length > 0">
+                        <div layout="column" flex>
+                          <md-card-content layout="row" class="md-whiteframe-3dp">
+                            <div layout="column" flex>
+                              <div layout="row">
+                                <div layout="column">
+                                  <span class="md-title color-licorice font-realtime-rounded font-weight-700 text-align-left" style="text-shadow: 0 0 calc(20px * 0.02) #111111; line-height: 20px; width: 12em;" ng-bind="( main.moment.unix(orderObject.status_transitions.paid).format('dddd') | uppercase ) + ' the ' + ( main.moment.unix(orderObject.status_transitions.paid).format('Do') | uppercase ) + ' of ' + ( main.moment.unix(orderObject.status_transitions.paid).format('MMMM') | uppercase ) + ', ' + main.moment.unix(orderObject.status_transitions.paid).format('Y')"></span>
+                                </div>
+                                <div layout="column" flex></div>
+                              </div>
+                              <div layout="row" class="pageElements_spacer_row" style="min-height: 16px;"></div>
+                              <div layout="row" ng-repeat="orderItemObject in orderObject.items track by $index" ng-if="orderItemObject.type == 'sku'">
+                                <div layout="column">
+                                  <div layout="row">
+                                    <a layout="column" ng-href="/products/{{ orderItemObject.parentSkuObject.productObject.id.replace('prod_', '') }}/">
+                                      <img layout="row" flex style="width: 94px; height: 94px;" ng-src="{{ orderItemObject.parentSkuObject.image }}" alt="" class="md-card-image">
+                                    </a>
+                                    <md-card-content layout="column" flex style="width: 188px;">
+                                      <div layout="row">
+                                        <div layout="column">
+                                          <a class="underline left-to-right color-licorice font-realtime-rounded font-weight-700 text-align-left" style="font-size: 24px; text-shadow: 0 0 calc(24px * 0.02) #111111; line-height: 24px;" ng-href="/products/{{ orderItemObject.parentSkuObject.productObject.id.replace('prod_', '') }}/" ng-bind="orderItemObject.parentSkuObject.productObject.name"></a>
+                                        </div>
+                                        <div layout="column" flex></div>
+                                      </div>
+                                      <div layout="row" class="pageElements_spacer_row" style="min-height: 8px;"></div>
+                                      <div layout="row">
+                                        <div layout="column">
+                                          <span class="font-realtime text-align-left" style="font-size: 12px;" ng-bind="(((orderItemObject.parentSkuObject.price / 100) * settings.currency.selected.value) | currency : settings.currency.selected.id + ' ' : 2) + ' &#x00D7; ' + orderItemObject.quantity"></span>
+                                        </div>
+                                        <div layout="column" flex></div>
+                                      </div>
+                                      <div layout="row">
+                                        <div layout="column">
+                                          <span class="font-realtime text-align-left" style="font-size: 12px;" ng-bind="(orderItemObject.parentSkuObject.attributes.color | uppercase) + ', ' + (orderItemObject.parentSkuObject.attributes.size | uppercase)"></span>
+                                        </div>
+                                        <div layout="column" flex></div>
+                                      </div>
+                                    </md-card-content>
+                                  </div>
+                                  <div layout="row" class="pageElements_spacer_row" style="min-height: 16px;" ng-if="!$last && orderObject.items[$index + 1].type == 'sku'"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </md-card-content>
+                          <div layout="row" class="pageElements_spacer_row" style="min-height: 16px;" ng-if="!$last"></div>
+                        </div>
+                      </div>
+                      <div layout="row" ng-if="pageController.cards[1].tabs[0].ordersList.length == 0">
+                        <div layout="column">
+                          <span class="text-align-left">
+                            There's nothing here.
+                          </span>
+                        </div>
+                        <div layout="column" flex></div>
+                      </div>
+                    </div>
+                  </md-card-content>
+                </md-tab>
+                <md-tab label="FULFULLED">
+                  <md-card-content layout="row">
+                    <div layout="column" flex>
+                      <div layout="row" ng-repeat="orderObject in pageController.cards[1].tabs[1].ordersList track by $index" ng-if="pageController.cards[1].tabs[1].ordersList.length > 0">
+                        <div layout="column" flex>
+                          <md-card-content layout="row" class="md-whiteframe-3dp">
+                            <div layout="column" flex>
+                              <div layout="row">
+                                <div layout="column">
+                                  <span class="md-title color-licorice font-realtime-rounded font-weight-700 text-align-left" style="text-shadow: 0 0 calc(20px * 0.02) #111111; line-height: 20px; width: 12em;" ng-bind="( main.moment.unix(orderObject.status_transitions.paid).format('dddd') | uppercase ) + ' the ' + ( main.moment.unix(orderObject.status_transitions.paid).format('Do') | uppercase ) + ' of ' + ( main.moment.unix(orderObject.status_transitions.paid).format('MMMM') | uppercase ) + ', ' + main.moment.unix(orderObject.created).format('Y')"></span>
+                                </div>
+                                <div layout="column" flex></div>
+                              </div>
+                              <div layout="row" class="pageElements_spacer_row" style="min-height: 16px;"></div>
+                              <div layout="row" ng-repeat="orderItemObject in orderObject.items track by $index" ng-if="orderItemObject.type == 'sku'">
+                                <div layout="column">
+                                  <div layout="row">
+                                    <a layout="column" ng-href="/products/{{ orderItemObject.parentSkuObject.productObject.id.replace('prod_', '') }}/">
+                                      <img layout="row" flex style="width: 94px; height: 94px;" ng-src="{{ orderItemObject.parentSkuObject.image }}" alt="" class="md-card-image">
+                                    </a>
+                                    <md-card-content layout="column" flex style="width: 188px;">
+                                      <div layout="row">
+                                        <div layout="column">
+                                          <a class="underline left-to-right color-licorice font-realtime-rounded font-weight-700 text-align-left" style="font-size: 24px; text-shadow: 0 0 calc(24px * 0.02) #111111; line-height: 24px;" ng-href="/products/{{ orderItemObject.parentSkuObject.productObject.id.replace('prod_', '') }}/" ng-bind="orderItemObject.parentSkuObject.productObject.name"></a>
+                                        </div>
+                                        <div layout="column" flex></div>
+                                      </div>
+                                      <div layout="row" class="pageElements_spacer_row" style="min-height: 8px;"></div>
+                                      <div layout="row">
+                                        <div layout="column">
+                                          <span class="font-realtime text-align-left" style="font-size: 12px;" ng-bind="(((orderItemObject.parentSkuObject.price / 100) * settings.currency.selected.value) | currency : settings.currency.selected.id + ' ' : 2) + ' &#x00D7; ' + orderItemObject.quantity"></span>
+                                        </div>
+                                        <div layout="column" flex></div>
+                                      </div>
+                                      <div layout="row">
+                                        <div layout="column">
+                                          <span class="font-realtime text-align-left" style="font-size: 12px;" ng-bind="(orderItemObject.parentSkuObject.attributes.color | uppercase) + ', ' + (orderItemObject.parentSkuObject.attributes.size | uppercase)"></span>
+                                        </div>
+                                        <div layout="column" flex></div>
+                                      </div>
+                                    </md-card-content>
+                                  </div>
+                                  <div layout="row" class="pageElements_spacer_row" style="min-height: 16px;" ng-if="!$last && orderObject.items[$index + 1].type == 'sku'"></div>
+                                </div>
+                              </div>
+                              <div layout="row" class="pageElements_spacer_row" style="min-height: 16px;"></div>
+                              <div layout="row">
+                                <div layout="column" flex></div>
+                                <div layout="column">
+                                  <a ng-href="{{ 'https://www.fedex.com/apps/fedextrack/?tracknumbers=' + orderObject.shipping.tracking_number }}" class="underline right-to-left font-realtime font-weight-700 text-align-right" style="font-size: 12px;">
+                                    TRACK SHIPMENT
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </md-card-content>
+                          <div layout="row" class="pageElements_spacer_row" style="min-height: 16px;" ng-if="!$last"></div>
+                        </div>
+                      </div>
+                      <div layout="row" ng-if="pageController.cards[1].tabs[1].ordersList.length == 0">
+                        <div layout="column">
+                          <span class="text-align-left">
+                            There's nothing here.
+                          </span>
+                        </div>
+                        <div layout="column" flex></div>
+                      </div>
+                    </div>
+                  </md-card-content>
+                </md-tab>
+              </md-tabs>
+              <md-card-content layout="row" ng-if="pageController.cards[1].tabs[0].loading || pageController.cards[1].tabs[1].loading">
+                <div layout="column" flex></div>
+                <md-progress-circular layout="column" md-mode="indeterminate"></md-progress-circular>
+                <div layout="column" flex></div>
+              </md-card-content>
+            </div>
+          </md-card>
+        </div>
+      </div>
+      <div layout-gt-xs="column" layout-xs="row" ng-class="{'pageElements_spacer_row': main.$mdMedia('xs'), 'pageElements_spacer_column': main.$mdMedia('gt-xs')}"></div>
+      <div layout-gt-xs="column" flex-gt-xs layout-xs="row">
+        <div layout="column" flex>
+          <md-card layout="row" class="m-t-0 m-r-0 m-b-0 m-l-0 b-licorice" style="border-width: 1px;">
+            <div layout="column" flex>
+              <md-card-content layout="row">
+                <div layout="column">
+                  <span class="md-display-1 color-licorice font-realtime-rounded font-weight-700 text-align-left" style="text-shadow: 0 0 calc(34px * 0.02) #111111; line-height: 34px;">
+                    CARDS
+                  </span>
+                </div>
+                <div layout="column" flex></div>
+              </md-card-content>
+              <div layout="row">
+                <div layout="column" flex="33">
+                  <div layout="row" class="pageElements_divider_row"></div>
+                </div>
+                <div layout="column" flex></div>
+              </div>
+              <md-card-content layout="row">
+                <div layout="column" flex>
+                  <div layout="row" ng-repeat="source in account.stripeCustomerObject.sources.data" ng-if="account.stripeCustomerObject.sources.data.length > 0">
+                    <div layout="column" flex>
+                      <md-card-content layout="row" class="md-whiteframe-3dp">
+                        <div layout="column" flex>
+                          <div layout="row">
+                            <div layout="column" flex>
+                              <span class="md-title color-licorice font-realtime-rounded font-weight-700 text-align-left" style="text-shadow: 0 0 calc(20px * 0.02) #111111; line-height: 20px;" ng-bind="source.brand"></span>
+                            </div>
+                            <div layout="column" class="pageElements_spacer_column" style="min-width: 8px;"></div>
+                            <div layout="column">
+                              <md-button class="md-icon-button m-r-0 m-l-0 p-t-0 p-r-0 p-b-0 p-l-0" style="width: 24px; min-height: 24px; height: 24px;" ng-click="source.delete();">
+                                <md-icon>
+                                  clear
+                                </md-icon>
+                              </md-button>
+                            </div>
+                          </div>
+                          <div layout="row">
+                            <div layout="column">
+                              <span class="md-subhead font-realtime text-align-left" ng-bind="source.funding"></span>
+                            </div>
+                            <div layout="column" flex></div>
+                          </div>
+                          <div layout="row" class="pageElements_spacer_row" style="min-height: 16px;"></div>
+                          <md-input-container layout="row">
+                            <label>Card Number</label>
+                            <textarea disabled ng-bind-html="(source.last4 | obfuscatedCreditCard) | trustAsHTML">&nbsp;</textarea>
+                          </md-input-container>
+                          <md-input-container layout="row" class="m-b-0">
+                            <label>Expiry Date</label>
+                            <textarea disabled ng-bind="((source.exp_month < 10) ? ('0' + source.exp_month) : (source.exp_month) ) + '/' + source.exp_year">&nbsp;</textarea>
+                          </md-input-container>
+                        </div>
+                      </md-card-content>
+                      <div layout="row" class="pageElements_spacer_row" style="min-height: 16px;" ng-if="!$last"></div>
+                    </div>
+                  </div>
+                  <div layout="row" ng-if="account.stripeCustomerObject.sources.data.length == 0">
+                    <div layout="column">
+                      <span class="text-align-left">
+                        There's nothing here.
+                      </span>
+                    </div>
+                    <div layout="column" flex></div>
+                  </div>
+                </div>
+              </md-card-content>
+              <div layout="row">
+                <div layout="column" flex></div>
+                <div layout="column" flex="33">
+                  <div layout="row" class="pageElements_divider_row"></div>
+                </div>
+              </div>
+              <md-card-content layout="row">
+                <div layout="column" flex></div>
+                <div layout="column">
+                  <a ng-href="/account/add-card/" class="underline right-to-left font-realtime font-weight-700 text-align-right" style="font-size: 12px;">
+                    ADD CARD
+                  </a>
+                </div>
+                <div layout="column" class="pageElements_spacer_column" style="min-width: 5px;"></div>
+                <div layout="column">
+                  <md-icon style="width: 15px; height: 15px; color: #111; font-size: 15px;">
+                    arrow_forward
+                  </md-icon>
+                </div>
+              </md-card-content>
+            </div>
+          </md-card>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div layout="column" flex></div>
+  <div layout="column" class="pageElements_spacer_column"></div>
+  <div layout="column" class="pageElements_spacer_column" ng-if="main.$mdMedia('gt-sm')"></div>
+  <div layout="column" class="pageElements_spacer_column" ng-if="main.$mdMedia('gt-md')"></div>
+  <div layout="column" class="pageElements_spacer_column" ng-if="main.$mdMedia('gt-lg')"></div>
+  <div layout="column" class="pageElements_spacer_column" ng-if="main.$mdMedia('xl')"></div>
+</div>
+<div layout="row" pl-inject-property-values="[['#account_pageElements_flexColumn', 'offsetWidth']]" ng-style="{'minHeight': propertyValues[0] + 'px'}"></div>
+<div layout="row" class="pageElements_spacer_row"></div>
+<div layout="row" class="pageElements_spacer_row" ng-if="main.$mdMedia('gt-sm')"></div>
+<div layout="row" class="pageElements_spacer_row" ng-if="main.$mdMedia('gt-md')"></div>
+<div layout="row" class="pageElements_spacer_row" ng-if="main.$mdMedia('gt-lg')"></div>
+<div layout="row" class="pageElements_spacer_row" ng-if="main.$mdMedia('xl')"></div>
+
+<pl-footer></pl-footer>

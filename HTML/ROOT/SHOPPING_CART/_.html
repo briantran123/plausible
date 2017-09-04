@@ -1,0 +1,139 @@
+<div layout="row" pl-inject-property-values="[['#shoppingCart_pageElements_flexColumn', 'offsetWidth']]" ng-style="{'minHeight': propertyValues[0] + 'px'}"></div>
+<div layout="row" class="pageElements_spacer_row"></div>
+<div layout="row" class="pageElements_spacer_row" ng-if="main.$mdMedia('gt-sm')"></div>
+<div layout="row" class="pageElements_spacer_row" ng-if="main.$mdMedia('gt-md')"></div>
+<div layout="row" class="pageElements_spacer_row" ng-if="main.$mdMedia('gt-lg')"></div>
+<div layout="row" class="pageElements_spacer_row" ng-if="main.$mdMedia('xl')"></div>
+<div layout="row">
+  <div layout="column" flex id="shoppingCart_pageElements_flexColumn"></div>
+  <div layout="column" class="pageElements_spacer_column"></div>
+  <div layout="column" class="pageElements_spacer_column" ng-if="main.$mdMedia('gt-sm')"></div>
+  <div layout="column" class="pageElements_spacer_column" ng-if="main.$mdMedia('gt-md')"></div>
+  <div layout="column" class="pageElements_spacer_column" ng-if="main.$mdMedia('gt-lg')"></div>
+  <div layout="column" class="pageElements_spacer_column" ng-if="main.$mdMedia('xl')"></div>
+  <md-card layout="column" class="m-t-0 m-r-0 m-b-0 m-l-0 b-licorice" style="border-width: 1px;">
+    <md-card-content layout="row">
+      <div layout="column">
+        <span class="md-display-1 color-licorice font-realtime-rounded font-weight-700 text-align-left" style="text-shadow: 0 0 calc(34px * 0.02) #111111; line-height: 34px;">
+          SHOPPING CART
+        </span>
+      </div>
+      <div layout="column" flex></div>
+    </md-card-content>
+    <div layout="row">
+      <div layout="column" flex="33">
+        <div layout="row" class="pageElements_divider_row"></div>
+      </div>
+      <div layout="column" flex></div>
+    </div>
+    <div layout="row" ng-if="(shoppingCart | typeof) !== 'undefined'">
+      <div layout="column" flex>
+        <md-card-content layout="row">
+          <div layout="column" flex>
+            <div layout="row" ng-repeat="skuObjectAndQuantity in shoppingCart track by $index">
+              <div layout="column" flex>
+                <div layout="row" class="md-whiteframe-3dp">
+                  <a layout="column" style="width: 117px; height: 117px;" ng-href="/products/{{ skuObjectAndQuantity.skuObject.productObject.id.replace('prod_', '') }}/">
+                    <img layout="row" flex ng-src="{{ skuObjectAndQuantity.skuObject.image }}" alt="" class="md-card-image">
+                  </a>
+                  <md-card-content layout="column" style="width: 234px;">
+                    <div layout="row">
+                      <div layout="column">
+                        <a class="underline left-to-right color-licorice font-realtime-rounded font-weight-700 text-align-left" style="font-size: 24px; text-shadow: 0 0 calc(24px * 0.02) #111111; line-height: 24px;" ng-href="/products/{{ skuObjectAndQuantity.skuObject.productObject.id.replace('prod_', '') }}/" ng-bind="skuObjectAndQuantity.skuObject.productObject.name"></a>
+                      </div>
+                      <div layout="column" flex></div>
+                    </div>
+                    <div layout="row" class="pageElements_spacer_row" style="min-height: 8px;"></div>
+                    <div layout="row">
+                      <div layout="column">
+                        <span class="font-realtime text-align-left" style="font-size: 12px;" ng-bind="(((skuObjectAndQuantity.skuObject.price / 100) * settings.currency.selected.value) | currency : settings.currency.selected.id + ' ' : 2) + ' &#x00D7; ' + skuObjectAndQuantity.quantity"></span>
+                      </div>
+                      <div layout="column" flex></div>
+                    </div>
+                    <div layout="row">
+                      <div layout="column">
+                        <span class="font-realtime text-align-left" style="font-size: 12px;" ng-bind="(skuObjectAndQuantity.skuObject.attributes.color | uppercase) + ', ' + (skuObjectAndQuantity.skuObject.attributes.size | uppercase)"></span>
+                      </div>
+                      <div layout="column" flex></div>
+                    </div>
+                    <div layout="row" class="pageElements_spacer_row" style="min-height: 8px;"></div>
+                    <div layout="row">
+                      <div layout="column">
+                        <a class="underline left-to-right font-realtime text-align-left" style="font-size: 12px; cursor: pointer;" ng-click="skuObjectAndQuantity.addOne();">
+                          ADD ONE
+                        </a>
+                      </div>
+                      <div layout="column" class="pageElements_spacer_column" style="min-width: 8px;"></div>
+                      <div layout="column">
+                        <a class="underline left-to-right font-realtime text-align-left" style="font-size: 12px; cursor: pointer;" ng-click="( (skuObjectAndQuantity.quantity > 1) ? (skuObjectAndQuantity.removeOne()) : (skuObjectAndQuantity.remove()) );" ng-bind="( (skuObjectAndQuantity.quantity > 1) ? ('REMOVE ONE') : ('REMOVE') )"></a>
+                      </div>
+                      <div layout="column" flex></div>
+                    </div>
+                  </md-card-content>
+                </div>
+                <div layout="row" class="pageElements_spacer_row" style="min-height: 16px;" ng-if="!$last"></div>
+              </div>
+            </div>
+          </div>
+        </md-card-content>
+        <div layout="row">
+          <div layout="column" flex></div>
+          <div layout="column" flex="33">
+            <div layout="row" class="pageElements_divider_row"></div>
+          </div>
+        </div>
+        <md-card-content layout="row">
+          <div layout="column" flex>
+            <div layout="row">
+              <div layout="column" flex></div>
+              <div layout="column">
+                <span class="font-realtime font-weight-700 text-align-left" style="font-size: 12px;">
+                  MERCHANDISE
+                </span>
+              </div>
+              <div layout="column" class="pageElements_spacer_column" style="min-width: 8px;"></div>
+              <div layout="column">
+                <span class="font-realtime text-align-left" style="font-size: 12px;" ng-bind="((pageController.merchandise / 100) * settings.currency.selected.value) | currency : settings.currency.selected.id + ' ' : 2"></span>
+              </div>
+            </div>
+            <div layout="row" class="pageElements_spacer_row" style="min-height: 8px;"></div>
+            <div layout="row">
+              <div layout="column" flex></div>
+              <div layout="column">
+                <a class="underline right-to-left font-realtime font-weight-700 text-align-right" style="font-size: 12px;" ng-href="/purchase/">
+                  CONTINUE to PURCHASE
+                </a>
+              </div>
+            </div>
+          </div>
+        </md-card-content>
+      </div>
+    </div>
+    <div layout="row" ng-if="(shoppingCart | typeof) == 'undefined'">
+      <div layout="column" flex>
+        <md-card-content layout="row">
+          <div layout="column">
+            <span class="text-align-left">
+              There's nothing here.
+            </span>
+          </div>
+          <div layout="column" flex></div>
+        </md-card-content>
+      </div>
+    </div>
+  </md-card>
+  <div layout="column" flex></div>
+  <div layout="column" class="pageElements_spacer_column"></div>
+  <div layout="column" class="pageElements_spacer_column" ng-if="main.$mdMedia('gt-sm')"></div>
+  <div layout="column" class="pageElements_spacer_column" ng-if="main.$mdMedia('gt-md')"></div>
+  <div layout="column" class="pageElements_spacer_column" ng-if="main.$mdMedia('gt-lg')"></div>
+  <div layout="column" class="pageElements_spacer_column" ng-if="main.$mdMedia('xl')"></div>
+</div>
+<div layout="row" pl-inject-property-values="[['#shoppingCart_pageElements_flexColumn', 'offsetWidth']]" ng-style="{'minHeight': propertyValues[0] + 'px'}"></div>
+<div layout="row" class="pageElements_spacer_row"></div>
+<div layout="row" class="pageElements_spacer_row" ng-if="main.$mdMedia('gt-sm')"></div>
+<div layout="row" class="pageElements_spacer_row" ng-if="main.$mdMedia('gt-md')"></div>
+<div layout="row" class="pageElements_spacer_row" ng-if="main.$mdMedia('gt-lg')"></div>
+<div layout="row" class="pageElements_spacer_row" ng-if="main.$mdMedia('xl')"></div>
+
+<pl-footer></pl-footer>

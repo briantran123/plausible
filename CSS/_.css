@@ -1,0 +1,442 @@
+/*
+  FONT-AWESOME
+*/
+
+@font-face {
+  font-family: "Font Awesome";
+  src: url(https://rawgit.com/FortAwesome/Font-Awesome/master/fonts/fontawesome-webfont.eot);
+  src: url(https://rawgit.com/FortAwesome/Font-Awesome/master/fonts/fontawesome-webfont.eot?#iefix) format("embedded-opentype"), url(https://rawgit.com/FortAwesome/Font-Awesome/master/fonts/fontawesome-webfont.woff) format("woff"), url(https://rawgit.com/FortAwesome/Font-Awesome/master/fonts/fontawesome-webfont.woff2) format("woff2"), url(https://rawgit.com/FortAwesome/Font-Awesome/master/fonts/fontawesome-webfont.ttf) format("truetype")
+}
+.fa {
+  font-family: "Font Awesome";
+  font-size: 24px;
+  line-height: 1
+}
+
+:focus {
+  outline: 0
+}
+
+/* end of FONT-AWESOME */
+
+/*
+  GENERAL
+*/
+
+body {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: default;
+}
+
+a {
+  color: #000
+}
+
+* {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none
+}
+
+input,
+input:before,
+input:after {
+  -webkit-user-select: initial;
+     -moz-user-select: initial;
+      -ms-user-select: initial;
+          user-select: initial
+}
+
+/*
+  UNDERLINED LINKS
+*/
+
+a.underline {
+  text-decoration: none;
+  position: relative
+}
+a.underline:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  border-bottom: 1px solid;
+  transition: width .25s cubic-bezier(.455, .03, .515, .955)
+}
+a.underline.right-to-left:after {
+  right: 0
+}
+a.underline.left-to-right:after {
+  left: 0
+}
+a.underline:hover:after {
+  width: 100%
+}
+
+/* end of UNDERLINED LINKS */
+
+/*
+  SELECTABLE SPANS
+*/
+
+span.selectable {
+  -webkit-user-select: text !important;
+     -moz-user-select: text !important;
+      -ms-user-select: text !important;
+          user-select: text !important;
+
+  cursor: text;
+}
+
+span.selectable::-moz-selection {
+  background: rgba(0,0,0,.87);
+  color: #ffffff;
+}
+span.selectable::selection {
+  background: rgba(0,0,0,.87);
+  color: #ffffff;
+}
+
+/* end of SELECTABLE SPANS */
+
+/*
+  SPACERS
+*/
+
+.pageElements_spacer_column {
+  min-width: 20px;
+  min-height: 1px
+}
+.pageElements_spacer_row {
+  min-width: 1px;
+  min-height: 20px
+}
+
+/* end of SPACERS */
+
+/*
+  DIVIDERS
+*/
+
+.pageElements_divider_column {
+  min-width: 1px;
+  background-color: #111111;
+  border-radius: 9999px
+}
+.pageElements_divider_row {
+  min-height: 1px;
+  background-color: #111111;
+  border-radius: 9999px
+}
+
+/* end of DIVIDERS */
+
+/*
+  IMAGES
+*/
+
+.containedImg {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center
+}
+.coveredImg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center
+}
+
+/* end of IMAGES */
+
+/*
+  HOVERABLE CARDS
+*/
+
+.hoverableCard {
+  transition:
+    box-shadow .25s cubic-bezier(.645, .045, .355, 1),
+    transform .25s cubic-bezier(.645, .045, .355, 1);
+}
+.hoverableCard:hover {
+  box-shadow:
+    0 6px 6px -3px rgba(0, 0, 0, .2),
+    0 10px 14px 1px rgba(0, 0, 0, .14),
+    0 4px 18px 3px rgba(0, 0, 0, .12);
+  transform: scale(1.015625);
+}
+
+/* end of HOVERABLE CARDS */
+
+/*
+  THEME
+*/
+
+.bg-white {
+  background-color: #FFF!important
+}
+.color-white {
+  color: #FFF!important
+}
+
+.bg-licorice {
+  background-color: #111111!important
+}
+.color-licorice {
+  color: #111111!important
+}
+
+/* end of THEME */
+
+/*
+  FONT-WEIGHTS
+*/
+
+.font-weight-900 {
+  font-weight: 900
+}
+.font-weight-700 {
+  font-weight: 700
+}
+.font-weight-500 {
+  font-weight: 500
+}
+.font-weight-400 {
+  font-weight: 400
+}
+.font-weight-200 {
+  font-weight: 200
+}
+
+/* end of FONT-WEIGHTS */
+
+/*
+  FONT-STYLES
+*/
+
+.font-style-normal {
+  font-style: normal
+}
+.font-style-italic {
+  font-style: italic
+}
+
+/* end of FONT-STYLES */
+
+/*
+  TEXT-ALIGNMENTS
+*/
+
+.text-align-center {
+  text-align: center!important
+}
+.text-align-left {
+  text-align: left!important
+}
+.text-align-justify {
+  text-align: justify!important
+}
+.text-align-right {
+  text-align: right!important
+}
+
+.text-align-last-center {
+  text-align-last: center!important
+}
+.text-align-last-left {
+  text-align-last: left!important
+}
+.text-align-last-justify {
+  text-align-last: justify!important
+}
+.text-align-last-right {
+  text-align-last: right!important
+}
+
+/* end of TEXT-ALIGNMENTS */
+
+/*
+  OVERFLOWS
+*/
+
+.overflow-scroll {
+  overflow: scroll!important;
+  -webkit-overflow-scrolling: touch!important
+}
+.overflow-hidden {
+  overflow: hidden!important
+}
+
+/* end of OVERFLOWS */
+
+/*
+  MARGINS
+*/
+
+.m-t-0 {
+  margin-top: 0!important
+}
+.m-r-0 {
+  margin-right: 0!important
+}
+.m-b-0 {
+  margin-bottom: 0!important
+}
+.m-l-0 {
+  margin-left: 0!important
+}
+
+/* end of MARGINS */
+
+/*
+  BORDERS
+*/
+
+.b-licorice {
+  border-style: solid;
+  border-color: #111111!important
+}
+
+.b-t-0 {
+  border-top-width: 0!important
+}
+.b-r-0 {
+  border-right-width: 0!important
+}
+.b-b-0 {
+  border-bottom-width: 0!important
+}
+.b-l-0 {
+  border-left-width: 0!important
+}
+
+/* end of BORDERS */
+
+/*
+  BORDER RADII
+*/
+
+.br-t-l-0,
+.br-t-l-0 .md-ripple-container {
+  border-top-left-radius: 0!important
+}
+.br-t-r-0,
+.br-t-r-0 .md-ripple-container {
+  border-top-right-radius: 0!important
+}
+.br-b-r-0,
+.br-b-r-0 .md-ripple-container {
+  border-bottom-right-radius: 0!important
+}
+.br-b-l-0,
+.br-b-l-0 .md-ripple-container {
+  border-bottom-left-radius: 0!important
+}
+
+/* end of BORDER RADII */
+
+/*
+  PADDINGS
+*/
+
+.p-t-0 {
+  padding-top: 0!important
+}
+.p-r-0 {
+  padding-right: 0!important
+}
+.p-b-0 {
+  padding-bottom: 0!important
+}
+.p-l-0 {
+  padding-left: 0!important
+}
+
+/* end of PADDINGS */
+
+/*
+  ANGULAR-MATERIAL MODIFICATIONS
+*/
+
+md-backdrop.md-sidenav-backdrop {
+  z-index: 71
+}
+md-sidenav {
+  z-index: 72
+}
+
+/* end of ANGULAR-MATERIAL MODIFICATIONS */
+
+/*
+  FLICKITY MODIFICATIONS
+*/
+
+.carousel .flickity-viewport {
+  width: 100%;
+  min-height: inherit;
+}
+
+/* end of FLICKITY MODIFICATIONS */
+
+/*
+
+  PAGES
+
+*/
+
+/*
+  /ROOT/ACCOUNT/ADD_CARD/
+*/
+
+#addCard_pageElements_scrollContainer::-webkit-scrollbar {
+  display: none;
+}
+
+/* end of /ROOT/PURCHASE/ */
+
+/*
+  /ROOT/PURCHASE/
+*/
+
+#purchase_pageElements_scrollContainer::-webkit-scrollbar {
+  display: none;
+}
+
+/* end of /ROOT/PURCHASE/ */
+
+/*
+  /ROOT/SIGN_IN/
+*/
+
+#signIn_pageElements_scrollContainer::-webkit-scrollbar {
+  display: none;
+}
+
+/* end of /ROOT/SIGN_IN/ */
+
+/*
+  /ROOT/SIGN_OUT/
+*/
+
+#signOut_pageElements_scrollContainer::-webkit-scrollbar {
+  display: none;
+}
+
+/* end of /ROOT/SIGN_OUT/ */
+
+/*
+  /ROOT/SIGN_UP/
+*/
+
+#signUp_pageElements_scrollContainer::-webkit-scrollbar {
+  display: none;
+}
+
+/* end of /ROOT/SIGN_UP/ */
+
+/* end of PAGES */

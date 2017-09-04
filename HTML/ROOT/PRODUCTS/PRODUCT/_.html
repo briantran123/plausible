@@ -1,0 +1,135 @@
+<div layout="row" pl-inject-property-values="[['#product_pageElements_flexColumn', 'offsetWidth']]" ng-style="{'minHeight': propertyValues[0] + 'px'}"></div>
+<div layout="row" class="pageElements_spacer_row"></div>
+<div layout="row" class="pageElements_spacer_row" ng-if="main.$mdMedia('gt-sm')"></div>
+<div layout="row" class="pageElements_spacer_row" ng-if="main.$mdMedia('gt-md')"></div>
+<div layout="row" class="pageElements_spacer_row" ng-if="main.$mdMedia('gt-lg')"></div>
+<div layout="row" class="pageElements_spacer_row" ng-if="main.$mdMedia('xl')"></div>
+<div layout="row">
+  <div layout="column" flex id="product_pageElements_flexColumn"></div>
+  <div layout="column" class="pageElements_spacer_column"></div>
+  <div layout="column" class="pageElements_spacer_column" ng-if="main.$mdMedia('gt-sm')"></div>
+  <div layout="column" class="pageElements_spacer_column" ng-if="main.$mdMedia('gt-md')"></div>
+  <div layout="column" class="pageElements_spacer_column" ng-if="main.$mdMedia('gt-lg')"></div>
+  <div layout="column" class="pageElements_spacer_column" ng-if="main.$mdMedia('xl')"></div>
+  <div layout="column">
+    <div layout="row">
+      <div layout="column">
+        <md-icon style="width: 15px; height: 15px; color: #111; font-size: 15px;">
+          arrow_back
+        </md-icon>
+      </div>
+      <div layout="column" class="pageElements_spacer_column" style="min-width: 5px;"></div>
+      <div layout="column">
+        <a ng-href="/products/" class="underline left-to-right font-realtime font-weight-700 text-align-left" style="font-size: 12px;">
+          PRODUCTS
+        </a>
+      </div>
+      <div layout="column" flex></div>
+    </div>
+    <div layout="row" class="pageElements_spacer_row"></div>
+    <md-card layout="row" class="m-t-0 m-r-0 m-b-0 m-l-0 b-licorice" style="border-width: 1px;" ng-if="!pageController.loading">
+      <div layout="column" flex>
+        <div layout-gt-xs="row" layout-xs="column">
+          <div layout-gt-xs="column" flex layout-xs="row" id="product_pageElements_carouselContainer" pl-inject-property-values="[['#product_pageElements_carouselContainer', 'offsetWidth']]" ng-style="{'minHeight': propertyValues[0] + 'px'}">
+            <div layout="column" flex>
+              <div layout="row" flex class="carousel" ng-attr-id="{{ 'product_pageElements_carousel_' + pageController.productObject.id }}">
+                <div class="carousel_cell coveredImg" style="width: 100%; height: 100%;" ng-repeat="image in pageController.productObject.images" ng-style="{'backgroundImage': 'url(' + image + ')'}"></div>
+              </div>
+            </div>
+          </div>
+          <div layout-gt-xs="column" layout-xs="row" ng-class="{'pageElements_divider_row': main.$mdMedia('xs'), 'pageElements_divider_column': main.$mdMedia('gt-xs')}"></div>
+          <div layout-gt-xs="column" flex-gt-xs layout-xs="row">
+            <div layout="column" flex>
+              <md-card-content layout="row">
+                <div layout="column" flex>
+                  <div layout="row">
+                    <div layout="column" flex></div>
+                    <div layout="column">
+                      <span class="md-display-1 color-licorice font-realtime-rounded font-weight-700 text-align-right" style="text-shadow: 0 0 calc(34px * 0.02) #111111; line-height: 34px;" ng-bind="pageController.productObject.name"></span>
+                    </div>
+                  </div>
+                  <div layout="row" class="pageElements_spacer_row" style="min-height: 8px;"></div>
+                  <div layout="row">
+                    <div layout="column" flex></div>
+                    <div layout="column">
+                      <span class="font-realtime text-align-right" style="font-size: 15px;" ng-bind="((pageController.productObject.metadata.price.system == 'standard') ? (((pageController.productObject.metadata.price.price / 100) * settings.currency.selected.value) | currency : settings.currency.selected.id + ' ' : 2) : ((pageController.productObject.metadata.price.system == 'range') ? ((((pageController.productObject.metadata.price.low / 100) * settings.currency.selected.value) | currency : settings.currency.selected.id + ' ' : 2) + ' to ' + (((pageController.productObject.metadata.price.high / 100) * settings.currency.selected.value) | currency : settings.currency.selected.id + ' ' : 2)) : ('') ) )"></span>
+                    </div>
+                  </div>
+                </div>
+              </md-card-content>
+              <div layout="row">
+                <div layout="column" flex></div>
+                <div layout="column" flex="33">
+                  <div layout="row" class="pageElements_divider_row"></div>
+                </div>
+              </div>
+              <md-card-content layout="row" flex>
+                <div layout="column">
+                  <span layout="row" class="selectable md-body-1 text-align-justify text-align-last-right" style="max-width: 63.429em;" ng-bind="pageController.productObject.description"></span>
+                  <div layout="row" flex></div>
+                  <div layout="row" class="pageElements_spacer_row" style="min-height: 8px;"></div>
+                  <div layout="row">
+                    <div layout="column" flex></div>
+                    <div layout="column">
+                      <md-select layout="row" class="m-t-0 m-b-0" ng-model="pageController.selectedColor" placeholder="COLOR" ng-change="pageController.productObject.updateAvailability();">
+                        <md-option ng-repeat="color in pageController.productObject.metadata.colors" ng-value="color" ng-bind="color | uppercase" ng-selected="$first"></md-option>
+                      </md-select>
+                    </div>
+                    <div layout="column" class="pageElements_spacer_column" style="min-width: 8px;"></div>
+                    <div layout="column">
+                      <md-select layout="row" class="m-t-0 m-b-0" ng-model="pageController.selectedSize" placeholder="SIZE" ng-change="pageController.productObject.updateAvailability();">
+                        <md-option ng-repeat="size in pageController.productObject.metadata.sizes.sizes" ng-value="size" ng-bind="size | uppercase"></md-option>
+                      </md-select>
+                    </div>
+                  </div>
+                  <div layout="row" class="pageElements_spacer_row" style="min-height: 8px;"></div>
+                  <div layout="row">
+                    <div layout="column" flex></div>
+                    <div layout="column">
+                      <span class="md-subhead font-realtime text-align-right" ng-bind="(((pageController.availability | typeof) !== 'undefined') ? (pageController.availability + ' IN STOCK.') : ('SELECT a SIZE') )"></span>
+                    </div>
+                  </div>
+                  <div layout="row" flex></div>
+                  <div layout="row" class="pageElements_spacer_row" style="min-height: 8px;"></div>
+                </div>
+              </md-card-content>
+              <div layout="row">
+                <div layout="column" flex></div>
+                <div layout="column" flex="50">
+                  <div layout="row" class="pageElements_divider_row"></div>
+                </div>
+              </div>
+              <md-card-content layout="row">
+                <div layout="column" flex></div>
+                <div layout="column">
+                  <a class="underline right-to-left font-realtime font-weight-700 text-align-right" style="font-size: 12px; cursor: not-allowed;" ng-style="{'color': (((pageController.selectedSize | typeof) !== 'undefined') ? ('#111111') : ('rgba(0, 0, 0, 0.26)') ), 'cursor': (((pageController.selectedSize | typeof) !== 'undefined') ? ('pointer') : ('not-allowed') )}" ng-click="pageController.productObject.addToShoppingCart();">
+                    ADD to SHOPPING CART
+                  </a>
+                </div>
+              </md-card-content>
+            </div>
+          </div>
+        </div>
+      </div>
+    </md-card>
+    <div layout="row" ng-if="pageController.loading">
+      <div layout="column" flex></div>
+      <md-progress-circular layout="column" md-mode="indeterminate"></md-progress-circular>
+      <div layout="column" flex></div>
+    </div>
+  </div>
+  <div layout="column" flex></div>
+  <div layout="column" class="pageElements_spacer_column"></div>
+  <div layout="column" class="pageElements_spacer_column" ng-if="main.$mdMedia('gt-sm')"></div>
+  <div layout="column" class="pageElements_spacer_column" ng-if="main.$mdMedia('gt-md')"></div>
+  <div layout="column" class="pageElements_spacer_column" ng-if="main.$mdMedia('gt-lg')"></div>
+  <div layout="column" class="pageElements_spacer_column" ng-if="main.$mdMedia('xl')"></div>
+</div>
+<div layout="row" pl-inject-property-values="[['#product_pageElements_flexColumn', 'offsetWidth']]" ng-style="{'minHeight': propertyValues[0] + 'px'}"></div>
+<div layout="row" class="pageElements_spacer_row"></div>
+<div layout="row" class="pageElements_spacer_row" ng-if="main.$mdMedia('gt-sm')"></div>
+<div layout="row" class="pageElements_spacer_row" ng-if="main.$mdMedia('gt-md')"></div>
+<div layout="row" class="pageElements_spacer_row" ng-if="main.$mdMedia('gt-lg')"></div>
+<div layout="row" class="pageElements_spacer_row" ng-if="main.$mdMedia('xl')"></div>
+
+<pl-footer></pl-footer>
