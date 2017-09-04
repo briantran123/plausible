@@ -1,0 +1,55 @@
+/*
+  REALTIME
+*/
+
+@font-face {
+  font-family: "Realtime Rounded";
+  font-weight: 900;
+	src: url(/APP/FONTS/REALTIME_ROUNDED/900/_.eot);
+  src: url(/APP/FONTS/REALTIME_ROUNDED/900/_.eot?#iefix) format("embedded-opentype"),
+       url(/APP/FONTS/REALTIME_ROUNDED/900/_.woff) format("woff"),
+			 url(/APP/FONTS/REALTIME_ROUNDED/900/_.woff2) format("woff2"),
+       url(/APP/FONTS/REALTIME_ROUNDED/900/_.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Realtime Rounded";
+  font-weight: 700;
+	src: url(/APP/FONTS/REALTIME_ROUNDED/700/_.eot);
+  src: url(/APP/FONTS/REALTIME_ROUNDED/700/_.eot?#iefix) format("embedded-opentype"),
+       url(/APP/FONTS/REALTIME_ROUNDED/700/_.woff) format("woff"),
+			 url(/APP/FONTS/REALTIME_ROUNDED/700/_.woff2) format("woff2"),
+       url(/APP/FONTS/REALTIME_ROUNDED/700/_.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Realtime Rounded";
+  font-weight: 500;
+	src: url(/APP/FONTS/REALTIME_ROUNDED/500/_.eot);
+  src: url(/APP/FONTS/REALTIME_ROUNDED/500/_.eot?#iefix) format("embedded-opentype"),
+       url(/APP/FONTS/REALTIME_ROUNDED/500/_.woff) format("woff"),
+			 url(/APP/FONTS/REALTIME_ROUNDED/500/_.woff2) format("woff2"),
+       url(/APP/FONTS/REALTIME_ROUNDED/500/_.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Realtime Rounded";
+  font-weight: 400;
+	src: url(/APP/FONTS/REALTIME_ROUNDED/400/_.eot);
+  src: url(/APP/FONTS/REALTIME_ROUNDED/400/_.eot?#iefix) format("embedded-opentype"),
+       url(/APP/FONTS/REALTIME_ROUNDED/400/_.woff) format("woff"),
+			 url(/APP/FONTS/REALTIME_ROUNDED/400/_.woff2) format("woff2"),
+       url(/APP/FONTS/REALTIME_ROUNDED/400/_.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Realtime Rounded";
+  font-weight: 200;
+	src: url(/APP/FONTS/REALTIME_ROUNDED/200/_.eot);
+  src: url(/APP/FONTS/REALTIME_ROUNDED/200/_.eot?#iefix) format("embedded-opentype"),
+       url(/APP/FONTS/REALTIME_ROUNDED/200/_.woff) format("woff"),
+			 url(/APP/FONTS/REALTIME_ROUNDED/200/_.woff2) format("woff2"),
+       url(/APP/FONTS/REALTIME_ROUNDED/200/_.ttf) format("truetype");
+}
+
+.font-realtime-rounded {
+  font-family: "Realtime Rounded";
+}
+
+/* End of REALTIME */

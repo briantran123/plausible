@@ -1,0 +1,104 @@
+/*
+  FUTURA
+*/
+
+@font-face {
+  font-family: "Futura PT";
+  font-weight: 300;
+  font-style: italic;
+  src: url(/APP/FONTS/FUTURA/300/ITALIC/_.eot?#iefix) format("embedded-opentype"),
+       url(/APP/FONTS/FUTURA/300/ITALIC/_.ttf) format("truetype"),
+       url(/APP/FONTS/FUTURA/300/ITALIC/_.woff) format("woff"),
+			 url(/APP/FONTS/FUTURA/300/ITALIC/_.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Futura PT";
+  font-weight: 300;
+  font-style: normal;
+  src: url(/APP/FONTS/FUTURA/300/NORMAL/_.eot?#iefix) format("embedded-opentype"),
+       url(/APP/FONTS/FUTURA/300/NORMAL/_.ttf) format("truetype"),
+       url(/APP/FONTS/FUTURA/300/NORMAL/_.woff) format("woff"),
+			 url(/APP/FONTS/FUTURA/300/NORMAL/_.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Futura PT";
+  font-weight: 400;
+  font-style: italic;
+  src: url(/APP/FONTS/FUTURA/400/ITALIC/_.eot?#iefix) format("embedded-opentype"),
+       url(/APP/FONTS/FUTURA/400/ITALIC/_.ttf) format("truetype"),
+       url(/APP/FONTS/FUTURA/400/ITALIC/_.woff) format("woff"),
+			 url(/APP/FONTS/FUTURA/400/ITALIC/_.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Futura PT";
+  font-weight: 400;
+  font-style: normal;
+  src: url(/APP/FONTS/FUTURA/400/NORMAL/_.eot?#iefix) format("embedded-opentype"),
+       url(/APP/FONTS/FUTURA/400/NORMAL/_.ttf) format("truetype"),
+       url(/APP/FONTS/FUTURA/400/NORMAL/_.woff) format("woff"),
+			 url(/APP/FONTS/FUTURA/400/NORMAL/_.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Futura PT";
+  font-weight: 500;
+  font-style: italic;
+  src: url(/APP/FONTS/FUTURA/500/ITALIC/_.eot?#iefix) format("embedded-opentype"),
+       url(/APP/FONTS/FUTURA/500/ITALIC/_.ttf) format("truetype"),
+       url(/APP/FONTS/FUTURA/500/ITALIC/_.woff) format("woff"),
+			 url(/APP/FONTS/FUTURA/500/ITALIC/_.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Futura PT";
+  font-weight: 500;
+  font-style: normal;
+  src: url(/APP/FONTS/FUTURA/500/NORMAL/_.eot?#iefix) format("embedded-opentype"),
+       url(/APP/FONTS/FUTURA/500/NORMAL/_.ttf) format("truetype"),
+       url(/APP/FONTS/FUTURA/500/NORMAL/_.woff) format("woff"),
+			 url(/APP/FONTS/FUTURA/500/NORMAL/_.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Futura PT";
+  font-weight: 700;
+  font-style: italic;
+  src: url(/APP/FONTS/FUTURA/700/ITALIC/_.eot) format("embedded-opentype"),
+       url(/APP/FONTS/FUTURA/700/ITALIC/_.ttf) format("truetype"),
+       url(/APP/FONTS/FUTURA/700/ITALIC/_.woff2) format("woff"),
+			 url(/APP/FONTS/FUTURA/700/ITALIC/_.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Futura PT";
+  font-weight: 700;
+  font-style: normal;
+  src: url(/APP/FONTS/FUTURA/700/NORMAL/_.eot) format("embedded-opentype"),
+       url(/APP/FONTS/FUTURA/700/NORMAL/_.ttf) format("truetype"),
+       url(/APP/FONTS/FUTURA/700/NORMAL/_.woff2) format("woff"),
+			 url(/APP/FONTS/FUTURA/700/NORMAL/_.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Futura PT";
+  font-weight: 800;
+  font-style: italic;
+  src: url(/APP/FONTS/FUTURA/800/ITALIC/_.eot) format("embedded-opentype"),
+       url(/APP/FONTS/FUTURA/800/ITALIC/_.ttf) format("truetype"),
+       url(/APP/FONTS/FUTURA/800/ITALIC/_.woff2) format("woff"),
+			 url(/APP/FONTS/FUTURA/800/ITALIC/_.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Futura PT";
+  font-weight: 800;
+  font-style: normal;
+  src: url(/APP/FONTS/FUTURA/800/NORMAL/_.eot) format("embedded-opentype"),
+       url(/APP/FONTS/FUTURA/800/NORMAL/_.ttf) format("truetype"),
+       url(/APP/FONTS/FUTURA/800/NORMAL/_.woff2) format("woff"),
+			 url(/APP/FONTS/FUTURA/800/NORMAL/_.woff2) format("woff2");
+}
+
+.font-futura {
+  font-family: Futura, "Futura PT";
+}
+
+/* End of FUTURA */

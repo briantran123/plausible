@@ -1,0 +1,55 @@
+/*
+  REALTIME
+*/
+
+@font-face {
+  font-family: "Realtime";
+  font-weight: 900;
+	src: url(/APP/FONTS/REALTIME/900/_.eot);
+  src: url(/APP/FONTS/REALTIME/900/_.eot?#iefix) format("embedded-opentype"),
+       url(/APP/FONTS/REALTIME/900/_.woff) format("woff"),
+			 url(/APP/FONTS/REALTIME/900/_.woff2) format("woff2"),
+       url(/APP/FONTS/REALTIME/900/_.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Realtime";
+  font-weight: 700;
+	src: url(/APP/FONTS/REALTIME/700/_.eot);
+  src: url(/APP/FONTS/REALTIME/700/_.eot?#iefix) format("embedded-opentype"),
+       url(/APP/FONTS/REALTIME/700/_.woff) format("woff"),
+			 url(/APP/FONTS/REALTIME/700/_.woff2) format("woff2"),
+       url(/APP/FONTS/REALTIME/700/_.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Realtime";
+  font-weight: 500;
+	src: url(/APP/FONTS/REALTIME/500/_.eot);
+  src: url(/APP/FONTS/REALTIME/500/_.eot?#iefix) format("embedded-opentype"),
+       url(/APP/FONTS/REALTIME/500/_.woff) format("woff"),
+			 url(/APP/FONTS/REALTIME/500/_.woff2) format("woff2"),
+       url(/APP/FONTS/REALTIME/500/_.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Realtime";
+  font-weight: 400;
+	src: url(/APP/FONTS/REALTIME/400/_.eot);
+  src: url(/APP/FONTS/REALTIME/400/_.eot?#iefix) format("embedded-opentype"),
+       url(/APP/FONTS/REALTIME/400/_.woff) format("woff"),
+			 url(/APP/FONTS/REALTIME/400/_.woff2) format("woff2"),
+       url(/APP/FONTS/REALTIME/400/_.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Realtime";
+  font-weight: 200;
+	src: url(/APP/FONTS/REALTIME/200/_.eot);
+  src: url(/APP/FONTS/REALTIME/200/_.eot?#iefix) format("embedded-opentype"),
+       url(/APP/FONTS/REALTIME/200/_.woff) format("woff"),
+			 url(/APP/FONTS/REALTIME/200/_.woff2) format("woff2"),
+       url(/APP/FONTS/REALTIME/200/_.ttf) format("truetype");
+}
+
+.font-realtime {
+  font-family: "Realtime";
+}
+
+/* End of REALTIME */
